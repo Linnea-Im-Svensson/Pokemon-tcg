@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-    provider = "sqlite"
+    provider = "postgresql"
     // NOTE: When using mysql or sqlserver, uncomment the @db.Text annotations in model Account below
     // Further reading:
     // https://next-auth.js.org/adapters/prisma#create-the-prisma-schema
@@ -14,14 +14,11 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Post {
+model Example {
     id        Int      @id @default(autoincrement())
     name      String
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
-
-    createdBy   User   @relation(fields: [createdById], references: [id])
-    createdById String
 
     @@index([name])
 }
@@ -55,14 +52,33 @@ model Session {
 
 model User {
     id            String    @id @default(cuid())
-    name          String?
+    name          String?   
+    username      String?   @unique
     email         String?   @unique
     emailVerified DateTime?
     image         String?
+    role          UserRole @default(User)
     accounts      Account[]
     sessions      Session[]
-    posts         Post[]
+    cardCollection  CardOwnedByUser[]
+    pokeCoins     Int       @default(0)
+    cardsUpForSale MarketPlaceItem[]
 }
+
+enum UserRole {
+    Admin
+    User
+}
+
+model CardOwnedByUser {
+    id            String    @id @default(cuid())
+    user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+    userId        String
+    pokemonCard   PokemonCard @relation(fields: [cardId], references: [id], onDelete: Cascade)
+    cardId        Int
+    createdAt     DateTime @default(now())
+}
+
 
 model VerificationToken {
     identifier String
@@ -70,4 +86,36 @@ model VerificationToken {
     expires    DateTime
 
     @@unique([identifier, token])
+}
+
+model PokemonCard {
+    id              Int      @id @default(autoincrement())
+    name            String
+    rarity          Rarity
+    image           String
+    sellValue       Int
+    owner           CardOwnedByUser[]
+    seller          MarketPlaceItem[]
+}
+
+enum Rarity {
+    common          //C
+    uncommon        //UC
+    rare            //R
+    doubleRare      //RR
+    superRare       //SR
+    artRare         //AR
+    secretArtRare   //SAR
+    ultraRare       //UR goldcards
+}
+
+model MarketPlaceItem {
+    id            String    @id @default(cuid())
+    seller        User      @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+    sellerId      String
+    pokemonCard   PokemonCard @relation(fields: [cardId], references: [id], onDelete: Cascade)
+    cardId        Int
+    cost          Int    @default(1)
+
+    createdAt     DateTime @default(now())
 }
