@@ -23,7 +23,7 @@ const PokemonCardContainer = async () => {
             <PokemonCardPreview
               card={card}
               owned={checkIfOwned(card.id)}
-              priority={card.id < 31}
+              priority={card.id <= 21}
             />
 
             <p>{card.name}</p>
