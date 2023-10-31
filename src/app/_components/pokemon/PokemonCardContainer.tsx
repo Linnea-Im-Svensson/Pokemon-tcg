@@ -1,4 +1,4 @@
-import { CardOwnedByUser, type PokemonCard } from "@prisma/client";
+import CardAmount from "./CardAmount";
 import PokemonCardPreview from "./PokemonCardPreview";
 import { api } from "~/trpc/server";
 
@@ -25,6 +25,7 @@ const PokemonCardContainer = async () => {
               owned={checkIfOwned(card.id)}
               priority={card.id < 31}
             />
+
             <p>{card.name}</p>
           </div>
         ))}

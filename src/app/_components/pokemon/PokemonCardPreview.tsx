@@ -1,9 +1,7 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
-import PokemonCardModal from "./PokemonCardModal";
 import { PokemonCard } from "@prisma/client";
+import Link from "next/link";
+import CardAmount from "./CardAmount";
 
 type PokemonCardProps = {
   priority: boolean;
@@ -11,12 +9,10 @@ type PokemonCardProps = {
   card: PokemonCard;
 };
 
-const PokemonCard = ({ priority, owned, card }: PokemonCardProps) => {
-  const [showModal, setShowModal] = useState<boolean>(false);
-
+const PokemonCard = async ({ priority, owned, card }: PokemonCardProps) => {
   return (
-    <>
-      <button onClick={() => setShowModal(true)}>
+    <div className="relative">
+      <Link href={`/pokemon/${card.id}`}>
         <Image
           src={card.image}
           alt={card.name}
@@ -25,11 +21,9 @@ const PokemonCard = ({ priority, owned, card }: PokemonCardProps) => {
           height={300}
           className={`h-auto w-full rounded-lg ${!owned && "grayscale"}`}
         />
-      </button>
-      {showModal && (
-        <PokemonCardModal card={card} setShowModal={setShowModal} />
-      )}
-    </>
+      </Link>
+      <CardAmount cardId={card.id} size="small" />
+    </div>
   );
 };
 

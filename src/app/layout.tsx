@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { headers } from "next/headers";
 
 import { TRPCReactProvider } from "~/trpc/react";
+import Navbar from "./_components/navbar/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,13 +19,25 @@ export const metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: {
   children: React.ReactNode;
+  modal: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body className={`font-sans ${inter.variable}`}>
-        <TRPCReactProvider headers={headers()}>{children}</TRPCReactProvider>
+        <TRPCReactProvider headers={headers()}>
+          <div className="bg-pokemonBackground h-screen w-screen bg-cover bg-center">
+            <div className="h-screen w-screen bg-white bg-opacity-80">
+              <div className="fixed z-20 flex w-full items-center justify-between  px-4">
+                <Navbar />
+              </div>
+              {modal}
+              {children}
+            </div>
+          </div>
+        </TRPCReactProvider>
       </body>
     </html>
   );

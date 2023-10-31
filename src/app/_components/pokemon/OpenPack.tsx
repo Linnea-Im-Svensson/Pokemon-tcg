@@ -1,8 +1,9 @@
+"use client";
+
 import { PokemonCard } from "@prisma/client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import CardMotionComponent from "./CardMotionComponent";
-// import { divide } from "lodash";
 import Image from "next/image";
 
 type OpenPackProps = {

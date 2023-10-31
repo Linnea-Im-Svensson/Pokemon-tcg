@@ -29,7 +29,8 @@
     "**/*.tsx",
     "**/*.cjs",
     "**/*.mjs",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".next/types/app/@modal/(.)pokemon/[id]/page.tsx"
   ],
   "exclude": ["node_modules"]
 }

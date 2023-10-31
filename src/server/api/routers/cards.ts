@@ -10,6 +10,11 @@ export const cardRouter = createTRPCRouter({
   getAllCards: publicProcedure.query(({ ctx }) => {
     return ctx.db.pokemonCard.findMany();
   }),
+  getCard: publicProcedure
+    .input(z.object({ cardId: z.number() }))
+    .query(({ ctx, input }) => {
+      return ctx.db.pokemonCard.findUnique({ where: { id: input.cardId } });
+    }),
   getUserCardsFromCollection: protectedProcedure.query(({ ctx }) => {
     return ctx.db.user.findFirst({
       where: {
@@ -24,7 +29,17 @@ export const cardRouter = createTRPCRouter({
     .input(z.object({ cardId: z.number() }))
     .query(({ ctx, input }) => {
       return ctx.db.cardOwnedByUser.findMany({
-        where: { cardId: input.cardId },
+        where: { cardId: input.cardId, userId: ctx.session.user.id },
+      });
+    }),
+  getCardInfo: protectedProcedure
+    .input(z.object({ cardId: z.number() }))
+    .query(({ ctx, input }) => {
+      return ctx.db.cardOwnedByUser.findMany({
+        where: {
+          userId: ctx.session.user.id,
+          cardId: input.cardId,
+        },
       });
     }),
   sellOneCard: protectedProcedure
