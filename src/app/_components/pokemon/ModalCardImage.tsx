@@ -6,7 +6,17 @@ import CardAmount from "./CardAmount";
 import { PokemonCard } from "@prisma/client";
 import { motion } from "framer-motion";
 
-const ModalCardImage = ({ id, card }: { id: string; card: PokemonCard }) => {
+const ModalCardImage = ({
+  id,
+  card,
+  showAmount,
+  showCost,
+}: {
+  id: string;
+  card: PokemonCard;
+  showAmount: boolean;
+  showCost: boolean;
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -23,10 +33,12 @@ const ModalCardImage = ({ id, card }: { id: string; card: PokemonCard }) => {
         priority
         className="h-[350px] w-auto  rounded-3xl"
       />
-      <CardAmount cardId={card.id} size="large" />
-      <p className="absolute -right-4 bottom-0 flex h-8 w-fit items-center justify-center rounded-full border-2 border-black bg-yellow-200 p-2">
-        {card.sellValue} coins
-      </p>
+      {showAmount && <CardAmount cardId={card.id} size="large" />}
+      {showCost && (
+        <p className="absolute -right-4 bottom-0 flex h-8 w-fit items-center justify-center rounded-full border-2 border-black bg-yellow-200 p-2">
+          {card.sellValue} coins
+        </p>
+      )}
     </motion.div>
   );
 };

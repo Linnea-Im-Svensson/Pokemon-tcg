@@ -12,7 +12,7 @@ const Loading = ({ size }: LoadingProps) => {
       small: "w-10 h-10",
       medium: "w-20 h-20",
       large: "w-30 h-30",
-      full: "w-full h-full",
+      full: "w-full h-full p-2",
     };
     return widthHeight[size];
   };

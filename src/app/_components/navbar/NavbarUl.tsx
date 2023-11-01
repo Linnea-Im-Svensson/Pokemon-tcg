@@ -15,7 +15,7 @@ const NavbarUl = ({ role }: { role: "Admin" | "User" }) => {
   return (
     <div className="flex items-start justify-around px-3">
       <div className="p-3">
-        <Link href={role ? "/auth/api/signout" : "/auth/api/signin"}>
+        <Link href={role ? "/api/auth/signout" : "/api/auth/signin"}>
           {role ? "Sign Out" : "Sign in"}
         </Link>
       </div>

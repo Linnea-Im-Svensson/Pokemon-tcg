@@ -9,7 +9,7 @@ type PokemonCardProps = {
   card: PokemonCard;
 };
 
-const PokemonCard = async ({ priority, owned, card }: PokemonCardProps) => {
+const PokemonCard = ({ priority, owned, card }: PokemonCardProps) => {
   return (
     <div className="relative">
       <Link href={`/pokemon/${card.id}`}>

@@ -13,6 +13,9 @@ export const marketplaceRouter = createTRPCRouter({
         seller: true,
         pokemonCard: true,
       },
+      orderBy: {
+        createdAt: "desc",
+      },
     });
   }),
   getItemsSoldByUser: protectedProcedure.query(({ ctx }) => {
@@ -51,6 +54,43 @@ export const marketplaceRouter = createTRPCRouter({
             cost: input.cost,
             sellerId: ctx.session.user.id,
           },
+        }),
+      ]);
+    }),
+  getItem: publicProcedure
+    .input(z.object({ itemId: z.string() }))
+    .query(({ ctx, input }) => {
+      return ctx.db.marketPlaceItem.findUnique({
+        where: { id: input.itemId },
+        include: { pokemonCard: true },
+      });
+    }),
+  buyMarketItem: protectedProcedure
+    .input(
+      z.object({
+        itemId: z.string(),
+        cost: z.number(),
+        sellerId: z.string(),
+        cardId: z.number(),
+      }),
+    )
+    .mutation(({ ctx, input }) => {
+      return ctx.db.$transaction([
+        //remove coins from buyer
+        ctx.db.user.update({
+          where: { id: ctx.session.user.id },
+          data: { pokeCoins: { decrement: input.cost } },
+        }),
+        //add coins to seller
+        ctx.db.user.update({
+          where: { id: input.sellerId },
+          data: { pokeCoins: { increment: input.cost } },
+        }),
+        //remove marketItem
+        ctx.db.marketPlaceItem.delete({ where: { id: input.itemId } }),
+        //add cardOwnedByUser to buyer
+        ctx.db.cardOwnedByUser.create({
+          data: { userId: ctx.session.user.id, cardId: input.cardId },
         }),
       ]);
     }),

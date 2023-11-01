@@ -22,7 +22,7 @@ const pokemonModalPage = async ({ params }: { params: { id: string } }) => {
               {card?.name}
             </h2>
 
-            <ModalCardImage id={params.id} card={card} />
+            <ModalCardImage id={params.id} card={card} showAmount showCost />
 
             <PokemonCardModalBtnContainer
               card={card}
