@@ -1,8 +1,8 @@
+import { revalidatePath } from "next/cache";
 import PokemonCardContainer from "./_components/pokemon/PokemonCardContainer";
+import { getServerAuthSession } from "~/server/auth";
 export default async function Home() {
-  return (
-    <div>
-      <PokemonCardContainer />
-    </div>
-  );
+  const session = await getServerAuthSession();
+  // revalidatePath('/')
+  return <div>{session ? <PokemonCardContainer /> : ""}</div>;
 }

@@ -3,6 +3,7 @@ import { cardRouter } from "./routers/cards";
 import { marketplaceRouter } from "./routers/marketplace";
 import { packRouter } from "./routers/pack";
 import { userRouter } from "./routers/user";
+import { dashboardRouter } from "./routers/dashboard";
 
 /**
  * This is the primary router for your server.
@@ -14,6 +15,7 @@ export const appRouter = createTRPCRouter({
   pack: packRouter,
   user: userRouter,
   marketplace: marketplaceRouter,
+  dashboard: dashboardRouter,
 });
 
 // export type definition of API

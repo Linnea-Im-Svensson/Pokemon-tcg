@@ -1,11 +1,9 @@
 "use client";
 
 import { CardOwnedByUser, PokemonCard } from "@prisma/client";
-import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { FaStore } from "react-icons/fa";
 import { api } from "~/trpc/react";
-import ModalExitBtn from "../modal/ModalExitBtn";
 
 type PokemonCardModalBtnContainerProps = {
   card: PokemonCard;
@@ -19,6 +17,7 @@ const PokemonCardModalBtnContainer = ({
   const cardArray = api.cards.getCardInfo.useQuery({
     cardId: card.id,
   }).data;
+
   const [amount, setAmount] = useState(amountOfCards.length);
   const [cost, setCost] = useState(card.sellValue);
   const [showMarketplaceBtns, setShowMarketplaceBtns] = useState(false);

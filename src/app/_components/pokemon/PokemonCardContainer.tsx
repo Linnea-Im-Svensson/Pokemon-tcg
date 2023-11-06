@@ -1,12 +1,9 @@
-"use client";
-
-import { api } from "~/trpc/react";
+import { api } from "~/trpc/server";
 import PokemonCardPreview from "./PokemonCardPreview";
 
-const PokemonCardContainer = () => {
-  const cards = api.cards.getAllCards.useQuery().data;
-  const userCardCollection =
-    api.cards.getUserCardsFromCollection.useQuery().data;
+const PokemonCardContainer = async () => {
+  const cards = await api.cards.getAllCards.query();
+  const userCardCollection = await api.cards.getUserCardsFromCollection.query();
   const checkIfOwned = (id: number) => {
     let owned = false;
     userCardCollection?.cardCollection.forEach((card) => {
@@ -27,7 +24,6 @@ const PokemonCardContainer = () => {
               owned={checkIfOwned(card.id)}
               priority={card.id <= 21}
             />
-
             <p>{card.name}</p>
           </div>
         ))}

@@ -10,7 +10,8 @@ import { AiTwotoneShop } from "react-icons/ai";
 import { api } from "~/trpc/react";
 
 const NavbarUl = ({ role }: { role: "Admin" | "User" }) => {
-  const pokeCoins = api.user.getPokeCoins.useQuery().data;
+  const pokeCoins =
+    role === "Admin" ? api.user.getPokeCoins.useQuery().data : { pokeCoins: 0 };
 
   return (
     <div className="flex items-start justify-around px-3">

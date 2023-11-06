@@ -17,10 +17,4 @@ export const userRouter = createTRPCRouter({
       },
     });
   }),
-  getTotalUsers: protectedProcedure.query(async ({ ctx }) => {
-    if (ctx.session.user.role === "Admin") {
-      const totalAmountOfUsers: number = (await ctx.db.user.findMany()).length;
-      return totalAmountOfUsers;
-    }
-  }),
 });
