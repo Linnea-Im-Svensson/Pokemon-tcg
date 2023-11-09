@@ -8,7 +8,9 @@ import {
 
 export const cardRouter = createTRPCRouter({
   getAllCards: publicProcedure.query(({ ctx }) => {
-    return ctx.db.pokemonCard.findMany();
+    return ctx.db.pokemonCard.findMany({
+      orderBy: { id: "asc" },
+    });
   }),
   getCard: publicProcedure
     .input(z.object({ cardId: z.number() }))
@@ -102,6 +104,13 @@ export const cardRouter = createTRPCRouter({
         }),
       ]);
     }),
-
   sellAllDuplicateCards: protectedProcedure.query(({ ctx }) => {}),
+  getPaginationCards: publicProcedure
+    .input(z.object({ page: z.number() }))
+    .query(({ ctx, input }) => {
+      return ctx.db.pokemonCard.findMany({
+        skip: (input.page - 1) * 12,
+        take: 12,
+      });
+    }),
 });
