@@ -1,6 +1,6 @@
 "use client";
 
-import { PokemonCard } from "@prisma/client";
+import type { PokemonCard } from "@prisma/client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";

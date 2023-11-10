@@ -1,6 +1,6 @@
 "use client";
 
-import { MarketPlaceItem } from "@prisma/client";
+import type { MarketPlaceItem } from "@prisma/client";
 import { useRouter } from "next/navigation";
 import { api } from "~/trpc/react";
 import Loading from "../utils/Loading";
@@ -15,9 +15,9 @@ const BuyItemBtn = ({
   const ctx = api.useUtils();
   const router = useRouter();
   const { mutate, isLoading } = api.marketplace.buyMarketItem.useMutation({
-    onSuccess: () => {
-      ctx.marketplace.getAllItems.invalidate();
-      ctx.user.getPokeCoins.invalidate();
+    onSuccess: async () => {
+      await ctx.marketplace.getAllItems.invalidate();
+      await ctx.user.getPokeCoins.invalidate();
       router.back();
     },
   });

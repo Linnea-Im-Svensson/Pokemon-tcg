@@ -1,4 +1,3 @@
-import { revalidatePath } from "next/cache";
 import React from "react";
 import BuyItemBtn from "~/app/_components/marketplace/BuyItemBtn";
 import ModalExitBtn from "~/app/_components/modal/ModalExitBtn";

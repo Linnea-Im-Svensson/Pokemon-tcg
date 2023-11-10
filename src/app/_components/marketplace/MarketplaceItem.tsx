@@ -1,4 +1,4 @@
-import { PokemonCard, User } from "@prisma/client";
+import type { PokemonCard, User } from "@prisma/client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,11 +19,7 @@ const MarketplaceItem = ({
 }: MarketplaceItemProps) => {
   return (
     <div>
-      <Link
-        href={`/marketplace/${itemId}`}
-        className="flex h-fit flex-col"
-        prefetch={false}
-      >
+      <Link href={`/marketplace/${itemId}`} className="flex h-fit flex-col">
         <Image
           src={card.image}
           alt={card.name}

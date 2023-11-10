@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import CardAmount from "./CardAmount";
-import { PokemonCard } from "@prisma/client";
+import type { PokemonCard } from "@prisma/client";
 import { motion } from "framer-motion";
 
 const ModalCardImage = ({

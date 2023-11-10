@@ -1,7 +1,7 @@
 "use client";
 
 import { api } from "~/trpc/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import DashboardCard from "./DashboardCard";
 import DashboardPokemonPreview from "./DashboardPokemonPreview";
 import Pagination from "../utils/Pagination";
@@ -13,11 +13,9 @@ const DashboardContainer = () => {
   const data = api.dashboard.getDashBoardData.useQuery().data;
   const cards = api.cards.getPaginationCards.useQuery({ page: page });
 
-  const { mutate, isLoading } = api.dashboard.updateCard.useMutation();
-
-  useEffect(() => {
-    cards.refetch();
-  }, [page]);
+  // useEffect(() => {
+  //   cards.refetch();
+  // }, [page]);
 
   return (
     <div className="pt-16">
@@ -39,8 +37,6 @@ const DashboardContainer = () => {
                 card={card}
                 index={index}
                 key={card.id}
-                // mutate={mutate}
-                isLoading={isLoading}
               />
             ))}
           </div>

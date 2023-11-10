@@ -1,6 +1,6 @@
 "use client";
 
-import { PokemonCard } from "@prisma/client";
+import type { PokemonCard } from "@prisma/client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import CardMotionComponent from "./CardMotionComponent";
@@ -27,7 +27,7 @@ const OpenPack = ({
         (card) => card.rarity === "common" || card.rarity === "uncommon",
       ),
     );
-  const [pack, setPack] = useState<PokemonCard[]>(
+  const [pack] = useState<PokemonCard[]>(
     pokemonPack
       .filter((card) => card.rarity === "common" || card.rarity === "uncommon")
       .reverse()

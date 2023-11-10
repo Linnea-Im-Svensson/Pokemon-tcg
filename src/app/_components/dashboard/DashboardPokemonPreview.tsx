@@ -1,21 +1,10 @@
 "use client";
 
-import { PokemonCard, Rarity } from "@prisma/client";
-import { revalidatePath } from "next/cache";
+import { type PokemonCard, Rarity } from "@prisma/client";
 import Image from "next/image";
 import { useState } from "react";
 import { api } from "~/trpc/react";
 import Loading from "../utils/Loading";
-import { MutationLike, UseTRPCMutationResult } from "@trpc/react-query/shared";
-import {
-  MutateFunction,
-  UseBaseMutationResult,
-  UseMutateAsyncFunction,
-  UseMutateFunction,
-  UseMutationOptions,
-  UseMutationResult,
-  UseQueryResult,
-} from "@tanstack/react-query";
 
 type CardInfo = {
   name: string;
@@ -26,13 +15,9 @@ type CardInfo = {
 const DashboardPokemonPreview = ({
   card,
   index,
-  mutate,
-  isLoading,
 }: {
   card: PokemonCard;
   index: number;
-  mutate?: UseMutationResult;
-  isLoading: boolean;
 }) => {
   const [editState, setEditState] = useState(false);
   const [cardInfo, setCardInfo] = useState<CardInfo>({
@@ -41,8 +26,7 @@ const DashboardPokemonPreview = ({
     rarity: card.rarity,
   });
   const rarity = Rarity;
-  const ctx = api.useUtils();
-  // const { mutate, isLoading } = api.dashboard.updateCard.useMutation();
+  const { mutate, isLoading } = api.dashboard.updateCard.useMutation();
   return (
     <div className="flex w-full items-center justify-between gap-4 rounded-lg border-2 border-black bg-white p-2">
       <Image
@@ -111,14 +95,14 @@ const DashboardPokemonPreview = ({
         {editState ? (
           <button
             className="flex h-10 w-full items-center justify-center rounded-lg bg-yellow-200 p-2 hover:bg-yellow-300"
-            // onClick={() =>
-            //   mutate({
-            //     cardId: card.id,
-            //     name: cardInfo.name,
-            //     sellValue: cardInfo.sellValue,
-            //     rarity: cardInfo.rarity,
-            //   })
-            // }
+            onClick={() =>
+              mutate({
+                cardId: card.id,
+                name: cardInfo.name,
+                sellValue: cardInfo.sellValue,
+                rarity: cardInfo.rarity,
+              })
+            }
           >
             {isLoading ? <Loading size="small" /> : "Save"}
           </button>

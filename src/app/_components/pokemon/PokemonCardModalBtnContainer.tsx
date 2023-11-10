@@ -1,6 +1,6 @@
 "use client";
 
-import { CardOwnedByUser, PokemonCard } from "@prisma/client";
+import type { CardOwnedByUser, PokemonCard } from "@prisma/client";
 import { useRef, useState } from "react";
 import { FaStore } from "react-icons/fa";
 import { api } from "~/trpc/react";
@@ -23,33 +23,32 @@ const PokemonCardModalBtnContainer = ({
   const [showMarketplaceBtns, setShowMarketplaceBtns] = useState(false);
   const ctx = api.useUtils();
   const { mutate, isLoading } = api.cards.sellOneCard.useMutation({
-    onSuccess: () => {
-      ctx.cards.getCardAmount.invalidate({ cardId: card.id });
-      ctx.cards.getUserCardsFromCollection.invalidate();
-      ctx.user.getPokeCoins.invalidate();
-      ctx.cards.getCardInfo.invalidate();
+    onSuccess: async () => {
+      await ctx.cards.getCardAmount.invalidate({ cardId: card.id });
+      await ctx.cards.getUserCardsFromCollection.invalidate();
+      await ctx.user.getPokeCoins.invalidate();
+      await ctx.cards.getCardInfo.invalidate();
     },
   });
 
   const { mutate: mutateSellDuplicates, isLoading: isSellingDuplicates } =
     api.cards.sellDuplicateCards.useMutation({
-      onSuccess: () => {
-        ctx.cards.getCardAmount.invalidate({ cardId: card.id });
-        ctx.cards.getUserCardsFromCollection.invalidate();
-        ctx.user.getPokeCoins.invalidate();
-        ctx.cards.getCardInfo.invalidate();
+      onSuccess: async () => {
+        await ctx.cards.getCardAmount.invalidate({ cardId: card.id });
+        await ctx.cards.getUserCardsFromCollection.invalidate();
+        await ctx.user.getPokeCoins.invalidate();
+        await ctx.cards.getCardInfo.invalidate();
       },
     });
 
   const { mutate: putUpCardForSale, isLoading: isPuttingUpForSale } =
     api.marketplace.putUpCardForSale.useMutation({
-      onSuccess: () => {
-        ctx.cards.getCardAmount.invalidate({ cardId: card.id });
-        ctx.cards.getUserCardsFromCollection.invalidate();
-        ctx.cards.getCardInfo.invalidate();
+      onSuccess: async () => {
+        await ctx.cards.getCardAmount.invalidate({ cardId: card.id });
+        await ctx.cards.getUserCardsFromCollection.invalidate();
+        await ctx.cards.getCardInfo.invalidate();
       },
     });
-  const marketSellPrice = useRef(null);
 
   const handleSale = () => {
     if (cost > 0) {

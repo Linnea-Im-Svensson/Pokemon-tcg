@@ -1,10 +1,10 @@
-import dashboardPage from "~/app/dashboard/page";
+import { ReactNode } from "react";
 
 const DashboardCard = ({
   children,
   bgColor,
 }: {
-  children: any;
+  children?: ReactNode;
   bgColor: string;
 }) => {
   return (

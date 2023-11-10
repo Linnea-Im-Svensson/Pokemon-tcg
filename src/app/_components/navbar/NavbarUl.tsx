@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { FaCoins, FaStore } from "react-icons/fa";
 import { AiTwotoneShop } from "react-icons/ai";
 import { api } from "~/trpc/react";
-import { UserRole } from "@prisma/client";
+import type { UserRole } from "@prisma/client";
 
 const NavbarUl = ({ role }: { role?: UserRole }) => {
   const pokeCoins =
