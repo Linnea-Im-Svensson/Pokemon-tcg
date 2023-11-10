@@ -19,7 +19,9 @@ const PokemonCard = ({ priority, owned, card }: PokemonCardProps) => {
           priority={priority}
           width={150}
           height={300}
-          className={`h-auto w-full rounded-lg ${!owned && "grayscale"}`}
+          className={`h-auto w-full rounded-lg hover:brightness-75 ${
+            !owned && "grayscale"
+          }`}
         />
       </Link>
       <CardAmount cardId={card.id} size="small" />

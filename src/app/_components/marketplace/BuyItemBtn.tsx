@@ -23,7 +23,7 @@ const BuyItemBtn = ({
   });
   return (
     <button
-      className="flex h-14 w-20 items-center justify-center rounded-lg bg-blue-200 p-2"
+      className="flex h-14 w-20 items-center justify-center rounded-lg bg-blue-200 p-2 hover:bg-blue-300"
       disabled={pokeCoins < item.cost || isLoading}
       onClick={() =>
         mutate({

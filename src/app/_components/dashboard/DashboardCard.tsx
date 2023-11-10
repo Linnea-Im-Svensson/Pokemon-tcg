@@ -15,8 +15,5 @@ const DashboardCard = ({
     </div>
   );
 };
-DashboardCard.defaultProps = {
-  bgColor: "bg-white",
-};
 
 export default DashboardCard;

@@ -7,7 +7,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/1.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 2,
@@ -15,7 +14,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/2.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 3,
@@ -23,7 +21,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "doubleRare",
     image: "/3.jpg",
     sellValue: 10,
-    amount: 0,
   },
   {
     id: 4,
@@ -31,7 +28,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/4.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 5,
@@ -39,7 +35,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/5.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 6,
@@ -47,7 +42,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "doubleRare",
     image: "/6.jpg",
     sellValue: 10,
-    amount: 0,
   },
   {
     id: 7,
@@ -55,7 +49,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/7.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 8,
@@ -63,7 +56,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/8.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 9,
@@ -71,7 +63,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "doubleRare",
     image: "/9.jpg",
     sellValue: 10,
-    amount: 0,
   },
   {
     id: 10,
@@ -79,7 +70,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/10.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 11,
@@ -87,7 +77,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/11.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 12,
@@ -95,7 +84,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/12.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 13,
@@ -103,7 +91,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/13.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 14,
@@ -111,7 +98,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/14.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 15,
@@ -119,7 +105,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/14.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 16,
@@ -127,7 +112,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/16.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 17,
@@ -135,7 +119,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/17.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 18,
@@ -143,7 +126,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/18.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 19,
@@ -151,7 +133,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/19.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 20,
@@ -159,7 +140,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/20.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 21,
@@ -167,7 +147,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/21.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 22,
@@ -175,7 +154,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/22.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 23,
@@ -183,7 +161,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/23.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 24,
@@ -191,7 +168,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "doubleRare",
     image: "/24.jpg",
     sellValue: 10,
-    amount: 0,
   },
   {
     id: 25,
@@ -199,7 +175,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/25.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 26,
@@ -207,7 +182,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/26.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 27,
@@ -215,7 +189,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/27.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 28,
@@ -223,7 +196,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/28.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 29,
@@ -231,7 +203,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/29.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 30,
@@ -239,7 +210,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/30.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 31,
@@ -247,7 +217,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/31.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 32,
@@ -255,7 +224,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/32.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 33,
@@ -263,7 +231,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/33.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 34,
@@ -271,7 +238,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/34.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 35,
@@ -279,7 +245,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/35.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 36,
@@ -287,7 +252,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/36.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 37,
@@ -295,7 +259,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/37.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 38,
@@ -303,7 +266,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "doubleRare",
     image: "/38.jpg",
     sellValue: 10,
-    amount: 0,
   },
   {
     id: 39,
@@ -311,7 +273,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/39.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 40,
@@ -319,7 +280,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "doubleRare",
     image: "/40.jpg",
     sellValue: 10,
-    amount: 0,
   },
   {
     id: 41,
@@ -327,7 +287,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/41.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 42,
@@ -335,7 +294,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/42.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 43,
@@ -343,7 +301,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/43.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 44,
@@ -351,7 +308,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/44.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 45,
@@ -359,7 +315,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/45.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 46,
@@ -367,7 +322,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/46.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 47,
@@ -375,7 +329,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/47.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 48,
@@ -383,7 +336,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/48.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 49,
@@ -391,7 +343,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/49.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 50,
@@ -399,7 +350,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/50.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 51,
@@ -407,7 +357,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/51.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 52,
@@ -415,7 +364,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/52.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 53,
@@ -423,7 +371,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/53.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 54,
@@ -431,7 +378,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/54.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 55,
@@ -439,7 +385,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/55.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 56,
@@ -447,7 +392,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/56.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 57,
@@ -455,7 +399,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/57.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 58,
@@ -463,7 +406,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/58.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 59,
@@ -471,7 +413,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/59.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 60,
@@ -479,7 +420,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/60.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 61,
@@ -487,7 +427,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/61.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 62,
@@ -495,7 +434,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/62.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 63,
@@ -503,7 +441,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/63.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 64,
@@ -511,7 +448,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/64.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 65,
@@ -519,7 +455,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "doubleRare",
     image: "/65.jpg",
     sellValue: 10,
-    amount: 0,
   },
   {
     id: 66,
@@ -527,7 +462,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/66.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 67,
@@ -535,7 +469,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/67.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 68,
@@ -543,7 +476,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/68.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 69,
@@ -551,7 +483,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/69.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 70,
@@ -559,7 +490,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/70.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 71,
@@ -567,7 +497,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/71.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 72,
@@ -575,7 +504,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/72.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 73,
@@ -583,7 +511,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/73.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 74,
@@ -591,7 +518,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/74.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 75,
@@ -599,7 +525,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/75.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 76,
@@ -607,7 +532,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "doubleRare",
     image: "/76.jpg",
     sellValue: 10,
-    amount: 0,
   },
   {
     id: 77,
@@ -615,7 +539,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/77.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 78,
@@ -623,7 +546,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/78.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 79,
@@ -631,7 +553,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/79.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 80,
@@ -639,7 +560,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/80.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 81,
@@ -647,7 +567,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/81.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 82,
@@ -655,7 +574,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/82.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 83,
@@ -663,7 +581,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/83.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 84,
@@ -671,7 +588,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/84.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 85,
@@ -679,7 +595,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/85.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 86,
@@ -687,7 +602,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/86.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 87,
@@ -695,7 +609,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/87.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 88,
@@ -703,7 +616,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/88.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 89,
@@ -711,7 +623,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/89.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 90,
@@ -719,7 +630,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/90.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 91,
@@ -727,7 +637,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/91.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 92,
@@ -735,7 +644,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/92.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 93,
@@ -743,7 +651,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/93.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 94,
@@ -751,7 +658,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/94.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 95,
@@ -759,7 +665,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/95.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 96,
@@ -767,7 +672,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/96.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 97,
@@ -775,7 +679,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/97.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 98,
@@ -783,7 +686,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/98.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 99,
@@ -791,7 +693,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/99.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 100,
@@ -799,7 +700,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/100.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 101,
@@ -807,7 +707,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/101.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 102,
@@ -815,7 +714,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/102.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 103,
@@ -823,7 +721,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/103.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 104,
@@ -831,7 +728,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/104.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 105,
@@ -839,7 +735,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/105.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 106,
@@ -847,7 +742,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/106.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 107,
@@ -855,7 +749,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/107.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 108,
@@ -863,7 +756,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/108.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 109,
@@ -871,7 +763,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/109.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 110,
@@ -879,7 +770,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/110.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 111,
@@ -887,7 +777,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/111.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 112,
@@ -895,7 +784,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/112.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 113,
@@ -903,7 +791,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/113.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 114,
@@ -911,7 +798,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/114.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 115,
@@ -919,7 +805,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "doubleRare",
     image: "/115.jpg",
     sellValue: 10,
-    amount: 0,
   },
   {
     id: 116,
@@ -927,7 +812,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/116.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 117,
@@ -935,7 +819,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/117.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 118,
@@ -943,7 +826,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/118.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 119,
@@ -951,7 +833,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/119.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 120,
@@ -959,7 +840,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/120.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 121,
@@ -967,7 +847,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/121.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 122,
@@ -975,7 +854,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/122.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 123,
@@ -983,7 +861,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/123.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 124,
@@ -991,7 +868,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "doubleRare",
     image: "/124.jpg",
     sellValue: 10,
-    amount: 0,
   },
   {
     id: 125,
@@ -999,7 +875,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/125.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 126,
@@ -1007,7 +882,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/126.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 127,
@@ -1015,7 +889,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/127.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 128,
@@ -1023,7 +896,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/128.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 129,
@@ -1031,7 +903,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/129.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 130,
@@ -1039,7 +910,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/130.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 131,
@@ -1047,7 +917,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/131.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 132,
@@ -1055,7 +924,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/132.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 133,
@@ -1063,7 +931,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/133.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 134,
@@ -1071,7 +938,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/134.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 135,
@@ -1079,7 +945,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/135.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 136,
@@ -1087,7 +952,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/136.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 137,
@@ -1095,7 +959,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/137.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 138,
@@ -1103,7 +966,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/138.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 139,
@@ -1111,7 +973,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/139.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 140,
@@ -1119,7 +980,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/137.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 141,
@@ -1127,7 +987,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/141.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 142,
@@ -1135,7 +994,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/142.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 143,
@@ -1143,7 +1001,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/143.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 144,
@@ -1151,7 +1008,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/144.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 145,
@@ -1159,7 +1015,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "doubleRare",
     image: "/145.jpg",
     sellValue: 10,
-    amount: 0,
   },
   {
     id: 146,
@@ -1167,7 +1022,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/146.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 147,
@@ -1175,7 +1029,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "common",
     image: "/147.jpg",
     sellValue: 1,
-    amount: 0,
   },
   {
     id: 148,
@@ -1183,7 +1036,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/148.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 149,
@@ -1191,7 +1043,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/149.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 150,
@@ -1199,7 +1050,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "rare",
     image: "/150.jpg",
     sellValue: 5,
-    amount: 0,
   },
   {
     id: 151,
@@ -1207,7 +1057,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "doubleRare",
     image: "/151.jpg",
     sellValue: 10,
-    amount: 0,
   },
   {
     id: 152,
@@ -1215,7 +1064,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/152.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 153,
@@ -1223,7 +1071,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/153.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 154,
@@ -1231,7 +1078,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/154.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 155,
@@ -1239,7 +1085,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/155.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 156,
@@ -1247,7 +1092,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/156.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 157,
@@ -1255,7 +1099,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/157.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 158,
@@ -1263,7 +1106,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/158.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 159,
@@ -1271,7 +1113,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/159.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 160,
@@ -1279,7 +1120,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/160.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 161,
@@ -1287,7 +1127,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/161.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 162,
@@ -1295,7 +1134,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/162.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 163,
@@ -1303,7 +1141,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/163.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 164,
@@ -1311,7 +1148,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/164.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 165,
@@ -1319,7 +1155,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "uncommon",
     image: "/165.jpg",
     sellValue: 2,
-    amount: 0,
   },
   {
     id: 166,
@@ -1327,7 +1162,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/166.jpg",
     sellValue: 100,
-    amount: 0,
   },
   {
     id: 167,
@@ -1335,7 +1169,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/167.jpg",
     sellValue: 100,
-    amount: 0,
   },
   {
     id: 168,
@@ -1343,7 +1176,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/168.jpg",
     sellValue: 100,
-    amount: 0,
   },
   {
     id: 169,
@@ -1351,7 +1183,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/169.jpg",
     sellValue: 100,
-    amount: 0,
   },
   {
     id: 170,
@@ -1359,7 +1190,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/170.jpg",
     sellValue: 100,
-    amount: 0,
   },
   {
     id: 171,
@@ -1367,7 +1197,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/171.jpg",
     sellValue: 100,
-    amount: 0,
   },
   {
     id: 172,
@@ -1375,7 +1204,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/172.jpg",
     sellValue: 100,
-    amount: 0,
   },
   {
     id: 173,
@@ -1383,7 +1211,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/173.jpg",
     sellValue: 150,
-    amount: 0,
   },
   {
     id: 174,
@@ -1391,7 +1218,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/174.jpg",
     sellValue: 100,
-    amount: 0,
   },
   {
     id: 175,
@@ -1399,7 +1225,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/175.jpg",
     sellValue: 100,
-    amount: 0,
   },
   {
     id: 176,
@@ -1407,7 +1232,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/176.jpg",
     sellValue: 100,
-    amount: 0,
   },
   {
     id: 177,
@@ -1415,7 +1239,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/177.jpg",
     sellValue: 100,
-    amount: 0,
   },
   {
     id: 178,
@@ -1423,7 +1246,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/178.jpg",
     sellValue: 100,
-    amount: 0,
   },
   {
     id: 179,
@@ -1431,7 +1253,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/179.jpg",
     sellValue: 100,
-    amount: 0,
   },
   {
     id: 180,
@@ -1439,7 +1260,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/180.jpg",
     sellValue: 100,
-    amount: 0,
   },
   {
     id: 181,
@@ -1447,7 +1267,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/181.jpg",
     sellValue: 100,
-    amount: 0,
   },
   {
     id: 182,
@@ -1455,7 +1274,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/182.jpg",
     sellValue: 100,
-    amount: 0,
   },
   {
     id: 183,
@@ -1463,7 +1281,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "artRare",
     image: "/183.jpg",
     sellValue: 100,
-    amount: 0,
   },
   {
     id: 184,
@@ -1471,7 +1288,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "superRare",
     image: "/184.jpg",
     sellValue: 200,
-    amount: 0,
   },
   {
     id: 185,
@@ -1479,7 +1295,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "superRare",
     image: "/185.jpg",
     sellValue: 300,
-    amount: 0,
   },
   {
     id: 186,
@@ -1487,7 +1302,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "superRare",
     image: "/186.jpg",
     sellValue: 200,
-    amount: 0,
   },
   {
     id: 187,
@@ -1495,7 +1309,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "superRare",
     image: "/187.jpg",
     sellValue: 200,
-    amount: 0,
   },
   {
     id: 188,
@@ -1503,7 +1316,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "superRare",
     image: "/188.jpg",
     sellValue: 200,
-    amount: 0,
   },
   {
     id: 189,
@@ -1511,7 +1323,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "superRare",
     image: "/189.jpg",
     sellValue: 200,
-    amount: 0,
   },
   {
     id: 190,
@@ -1519,7 +1330,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "superRare",
     image: "/190.jpg",
     sellValue: 200,
-    amount: 0,
   },
   {
     id: 191,
@@ -1527,7 +1337,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "superRare",
     image: "/184.jpg",
     sellValue: 200,
-    amount: 0,
   },
   {
     id: 192,
@@ -1535,7 +1344,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "superRare",
     image: "/192.jpg",
     sellValue: 200,
-    amount: 0,
   },
   {
     id: 193,
@@ -1543,7 +1351,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "superRare",
     image: "/193.jpg",
     sellValue: 200,
-    amount: 0,
   },
   {
     id: 194,
@@ -1551,7 +1358,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "superRare",
     image: "/194.jpg",
     sellValue: 200,
-    amount: 0,
   },
   {
     id: 195,
@@ -1559,7 +1365,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "superRare",
     image: "/195.jpg",
     sellValue: 200,
-    amount: 0,
   },
   {
     id: 196,
@@ -1567,7 +1372,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "superRare",
     image: "/196.jpg",
     sellValue: 1500,
-    amount: 0,
   },
   {
     id: 197,
@@ -1575,7 +1379,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "superRare",
     image: "/197.jpg",
     sellValue: 300,
-    amount: 0,
   },
   {
     id: 198,
@@ -1583,7 +1386,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "superRare",
     image: "/198.jpg",
     sellValue: 300,
-    amount: 0,
   },
   {
     id: 199,
@@ -1591,7 +1393,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "superRare",
     image: "/199.jpg",
     sellValue: 300,
-    amount: 0,
   },
   {
     id: 200,
@@ -1599,7 +1400,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "secretArtRare",
     image: "/200.jpg",
     sellValue: 500,
-    amount: 0,
   },
   {
     id: 201,
@@ -1607,7 +1407,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "secretArtRare",
     image: "/201.jpg",
     sellValue: 2000,
-    amount: 0,
   },
   {
     id: 202,
@@ -1615,7 +1414,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "secretArtRare",
     image: "/202.jpg",
     sellValue: 500,
-    amount: 0,
   },
   {
     id: 203,
@@ -1623,7 +1421,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "secretArtRare",
     image: "/203.jpg",
     sellValue: 1000,
-    amount: 0,
   },
   {
     id: 204,
@@ -1631,7 +1428,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "secretArtRare",
     image: "/204.jpg",
     sellValue: 1000,
-    amount: 0,
   },
   {
     id: 205,
@@ -1639,7 +1435,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "secretArtRare",
     image: "/205.jpg",
     sellValue: 2000,
-    amount: 0,
   },
   {
     id: 206,
@@ -1647,7 +1442,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "secretArtRare",
     image: "/206.jpg",
     sellValue: 3000,
-    amount: 0,
   },
   {
     id: 207,
@@ -1655,7 +1449,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "secretArtRare",
     image: "/207.jpg",
     sellValue: 1000,
-    amount: 0,
   },
   {
     id: 208,
@@ -1663,7 +1456,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "ultraRare",
     image: "/208.jpg",
     sellValue: 500,
-    amount: 0,
   },
   {
     id: 209,
@@ -1671,7 +1463,6 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "ultraRare",
     image: "/209.jpg",
     sellValue: 500,
-    amount: 0,
   },
   {
     id: 210,
@@ -1679,6 +1470,5 @@ export const pokemonCardsArr: PokemonCard[] = [
     rarity: "ultraRare",
     image: "/210.jpg",
     sellValue: 500,
-    amount: 0,
   },
 ];
