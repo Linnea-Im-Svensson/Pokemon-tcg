@@ -5,6 +5,7 @@ import { headers } from "next/headers";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import Navbar from "./_components/navbar/Navbar";
+import Notification from "./_components/notification/Notification";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
         <TRPCReactProvider headers={headers()}>
           <div className="h-screen w-screen bg-pokemonBackground bg-cover bg-center">
             <div className="h-screen w-screen bg-white bg-opacity-80">
+              <Notification />
               <div className="fixed z-20 flex w-full items-center justify-between  px-4">
                 <Navbar />
               </div>

@@ -95,14 +95,20 @@ const DashboardPokemonPreview = ({
         {editState ? (
           <button
             className="flex h-10 w-full items-center justify-center rounded-lg bg-yellow-200 p-2 hover:bg-yellow-300"
-            onClick={() =>
+            onClick={() => (
               mutate({
                 cardId: card.id,
                 name: cardInfo.name,
                 sellValue: cardInfo.sellValue,
                 rarity: cardInfo.rarity,
-              })
-            }
+              }),
+              setCardInfo({
+                name: cardInfo.name,
+                sellValue: cardInfo.sellValue,
+                rarity: cardInfo.rarity,
+              }),
+              setEditState(false)
+            )}
           >
             {isLoading ? <Loading size="small" /> : "Save"}
           </button>

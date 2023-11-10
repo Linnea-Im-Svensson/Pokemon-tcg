@@ -12,7 +12,9 @@ import type { UserRole } from "@prisma/client";
 
 const NavbarUl = ({ role }: { role?: UserRole }) => {
   const pokeCoins =
-    role === "Admin" ? api.user.getPokeCoins.useQuery().data : { pokeCoins: 0 };
+    role === "Admin" || "User"
+      ? api.user.getPokeCoins.useQuery().data
+      : { pokeCoins: 0 };
 
   return (
     <div className="flex items-start justify-around px-3">

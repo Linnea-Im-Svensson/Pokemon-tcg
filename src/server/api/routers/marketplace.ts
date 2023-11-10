@@ -76,6 +76,14 @@ export const marketplaceRouter = createTRPCRouter({
     )
     .mutation(({ ctx, input }) => {
       return ctx.db.$transaction([
+        //create notification
+        ctx.db.marketNotification.create({
+          data: {
+            cost: input.cost,
+            cardId: input.cardId,
+            sellingUserId: input.sellerId,
+          },
+        }),
         //remove coins from buyer
         ctx.db.user.update({
           where: { id: ctx.session.user.id },

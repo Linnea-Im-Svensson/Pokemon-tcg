@@ -26,7 +26,9 @@ const DashboardContainer = () => {
         </DashboardCard>
         <DashboardCard bgColor="bg-white">
           <p className="text-xl font-semibold">Average cards per user:</p>
-          <p className="text-lg">{data?.cardAverage}</p>
+          <p className="text-lg">
+            {data?.cardAverage && Math.ceil(data?.cardAverage)}
+          </p>
         </DashboardCard>
       </div>
       <div className="w-full p-4">

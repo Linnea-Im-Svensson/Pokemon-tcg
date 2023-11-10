@@ -4,6 +4,7 @@ import { marketplaceRouter } from "./routers/marketplace";
 import { packRouter } from "./routers/pack";
 import { userRouter } from "./routers/user";
 import { dashboardRouter } from "./routers/dashboard";
+import { notificationRouter } from "./routers/notification";
 
 /**
  * This is the primary router for your server.
@@ -16,6 +17,7 @@ export const appRouter = createTRPCRouter({
   user: userRouter,
   marketplace: marketplaceRouter,
   dashboard: dashboardRouter,
+  notifications: notificationRouter,
 });
 
 // export type definition of API

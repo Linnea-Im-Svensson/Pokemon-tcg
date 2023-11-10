@@ -63,6 +63,7 @@ model User {
     cardCollection  CardOwnedByUser[]
     pokeCoins     Int       @default(0)
     cardsUpForSale MarketPlaceItem[]
+    notifications MarketNotification[]
 }
 
 enum UserRole {
@@ -96,6 +97,7 @@ model PokemonCard {
     sellValue       Int
     owner           CardOwnedByUser[]
     seller          MarketPlaceItem[]
+    notifications   MarketNotification[]
 }
 
 enum Rarity {
@@ -116,6 +118,18 @@ model MarketPlaceItem {
     pokemonCard   PokemonCard @relation(fields: [cardId], references: [id], onDelete: Cascade)
     cardId        Int
     cost          Int    @default(1)
+
+    createdAt     DateTime @default(now())
+}
+
+model MarketNotification {
+    id              String    @id @default(cuid())
+    sellingUser     User      @relation(fields: [sellingUserId], references: [id], onDelete: Cascade)
+    sellingUserId   String
+    card            PokemonCard @relation(fields: [cardId], references: [id], onDelete: Cascade)
+    cardId          Int
+    cost            Int
+    read            Boolean  @default(false)
 
     createdAt     DateTime @default(now())
 }
