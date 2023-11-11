@@ -17,4 +17,18 @@ export const userRouter = createTRPCRouter({
       },
     });
   }),
+  addCoins: protectedProcedure
+    .input(z.object({ amountOfCoins: z.number() }))
+    .mutation(({ ctx, input }) => {
+      return ctx.db.user.update({
+        where: {
+          id: ctx.session.user.id,
+        },
+        data: {
+          pokeCoins: {
+            increment: input.amountOfCoins,
+          },
+        },
+      });
+    }),
 });

@@ -1,3 +1,4 @@
+import ChooseYourStarterGame from "./_components/games/chooseYourStarter/ChooseYourStarterGame";
 import PokemonCardContainer from "./_components/pokemon/PokemonCardContainer";
 import { getServerAuthSession } from "~/server/auth";
 

@@ -10,6 +10,7 @@ export default {
       },
       backgroundImage: {
         pokemonBackground: "url('/background.jpg')",
+        battleBackground: "url('/battle-bg.png')",
       },
     },
   },
