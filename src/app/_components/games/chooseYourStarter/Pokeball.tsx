@@ -30,7 +30,7 @@ const Pokeball = ({
         height={height}
         width={width}
         priority
-        className="absolute -rotate-[20deg] opacity-0 transition-all hover:opacity-100"
+        className="absolute h-36 w-auto -rotate-[20deg] opacity-0 transition-all hover:opacity-100"
       />
 
       <Image

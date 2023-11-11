@@ -133,3 +133,19 @@ model MarketNotification {
 
     createdAt     DateTime @default(now())
 }
+
+model ShopItem {
+    id              String    @id @default(cuid())
+    name            String
+    cost            Int       @default(200)
+
+    createdAt       DateTime @default(now())
+}
+
+model Games {
+    id              String    @id @default(cuid())
+    name            String
+    winValue        Int       @default(5)
+
+    createdAt       DateTime @default(now())
+}

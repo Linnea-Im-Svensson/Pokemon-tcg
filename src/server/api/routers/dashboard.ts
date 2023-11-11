@@ -40,4 +40,48 @@ export const dashboardRouter = createTRPCRouter({
         },
       });
     }),
+  getShopItemDetails: publicProcedure.query(({ ctx }) => {
+    return ctx.db.shopItem.findMany();
+  }),
+  getGameDetails: publicProcedure.query(({ ctx }) => {
+    return ctx.db.games.findMany();
+  }),
+  updateShopItem: protectedProcedure
+    .input(
+      z.object({
+        itemId: z.string(),
+        name: z.string().optional(),
+        cost: z.number().min(10).max(5000).optional(),
+      }),
+    )
+    .mutation(({ ctx, input }) => {
+      return ctx.db.shopItem.update({
+        where: {
+          id: input.itemId,
+        },
+        data: {
+          cost: input.cost,
+          name: input.name,
+        },
+      });
+    }),
+  updateGame: protectedProcedure
+    .input(
+      z.object({
+        itemId: z.string(),
+        name: z.string().optional(),
+        winValue: z.number().min(1).max(500).optional(),
+      }),
+    )
+    .mutation(({ ctx, input }) => {
+      return ctx.db.games.update({
+        where: {
+          id: input.itemId,
+        },
+        data: {
+          winValue: input.winValue,
+          name: input.name,
+        },
+      });
+    }),
 });

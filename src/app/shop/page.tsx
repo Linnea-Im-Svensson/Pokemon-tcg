@@ -21,6 +21,9 @@ const shopPage = () => {
       ctx.user.getPokeCoins.invalidate();
     },
   });
+  const items = api.dashboard.getShopItemDetails.useQuery().data;
+
+  console.log(items);
 
   const { data } = api.user.getPokeCoins.useQuery();
 
@@ -28,42 +31,53 @@ const shopPage = () => {
 
   return (
     <div className="flex h-screen w-screen items-center justify-center">
-      <button
-        onClick={() => mutate()}
-        disabled={isLoading || data?.pokeCoins! < 20}
-        className="relative flex h-96 w-80 flex-col items-center justify-center gap-4 rounded-xl border-4 border-black bg-white pt-2"
-        onMouseOver={() => data?.pokeCoins! < 20 && setShowDisabledNote(true)}
-        onMouseOut={() => setShowDisabledNote(false)}
-      >
-        <AnimatePresence>
-          {showDisabledNote && (
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="absolute left-[50%] top-[50%] w-96 -translate-x-[50%] -translate-y-[50%] rounded-md bg-yellow-200 p-4 text-xl"
-            >
-              Not enough pokécoins
-            </motion.p>
+      {items && items[0]?.cost && (
+        <button
+          onClick={() => items[0]?.cost && mutate({ itemCost: items[0]?.cost })}
+          disabled={isLoading || data?.pokeCoins! < items[0]?.cost}
+          className="relative flex h-fit w-80 flex-col items-center justify-center gap-4 rounded-xl border-4 border-black bg-white py-4"
+          onMouseOver={() =>
+            data?.pokeCoins! < items[0]?.cost! && setShowDisabledNote(true)
+          }
+          onMouseOut={() => setShowDisabledNote(false)}
+        >
+          <AnimatePresence>
+            {showDisabledNote && (
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="absolute left-[50%] top-[50%] w-96 -translate-x-[50%] -translate-y-[50%] rounded-md bg-yellow-200 p-4 text-xl"
+              >
+                Not enough pokécoins
+              </motion.p>
+            )}
+          </AnimatePresence>
+          {isLoading ? (
+            <div className="flex h-full w-full items-center justify-center bg-white">
+              <Loading size="medium" />
+            </div>
+          ) : (
+            <>
+              {items && (
+                <>
+                  <p>{items[0]?.name}</p>
+                  <Image
+                    src="/pack.jpg"
+                    height={500}
+                    width={300}
+                    alt="pokemon card pack"
+                    className="h-auto w-80 rounded-xl"
+                    priority
+                  />
+                  <p>{items[0]?.cost} Pokécoins</p>
+                </>
+              )}
+            </>
           )}
-        </AnimatePresence>
-        {isLoading ? (
-          <div className="flex h-full w-full items-center justify-center bg-white">
-            <Loading size="medium" />
-          </div>
-        ) : (
-          <>
-            <Image
-              src="/pack.jpg"
-              alt="pokemon card pack rounded-xl"
-              height={500}
-              width={300}
-              priority
-            />
-            <p>20 Pokécoins</p>
-          </>
-        )}
-      </button>
+        </button>
+      )}
+
       {showOpenPackModule && (
         <OpenPack
           pokemonPack={pokemonPack}

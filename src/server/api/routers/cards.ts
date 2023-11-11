@@ -109,8 +109,8 @@ export const cardRouter = createTRPCRouter({
     .input(z.object({ page: z.number() }))
     .query(({ ctx, input }) => {
       return ctx.db.pokemonCard.findMany({
-        skip: (input.page - 1) * 12,
-        take: 12,
+        skip: (input.page - 1) * 6,
+        take: 6,
       });
     }),
 });
