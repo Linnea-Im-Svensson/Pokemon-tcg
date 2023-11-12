@@ -8,7 +8,9 @@ export const transformer = superjson;
 function getBaseUrl() {
   if (typeof window !== "undefined") return "";
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
-  return `https://pokemon-tcg-theta.vercel.app/:${process.env.PORT ?? 3000}`;
+  return `http://localhost:${process.env.PORT ?? 3000}`;
+
+  //https://pokemon-tcg-theta.vercel.app/:
 }
 
 export function getUrl() {

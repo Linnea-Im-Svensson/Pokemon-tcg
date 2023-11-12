@@ -1,7 +1,7 @@
 "use client";
 
 import type { CardOwnedByUser, PokemonCard } from "@prisma/client";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { FaStore } from "react-icons/fa";
 import { api } from "~/trpc/react";
 

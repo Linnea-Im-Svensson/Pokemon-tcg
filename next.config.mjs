@@ -7,6 +7,9 @@ await import("./src/env.mjs");
 /** @type {import("next").NextConfig} */
 const config = {
   eslint: { ignoreDuringBuilds: true },
+  images: {
+    domains: ["lh3.googleusercontent.com"],
+  },
 };
 
 export default config;

@@ -56,7 +56,7 @@ const BattleScreen = ({
         <motion.div
           initial={{ translateX: -2000 }}
           animate={{ translateX: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 1, ease: "easeOut" }}
           className="relative flex h-60 w-full flex-col justify-around border-y-4 border-blue-100 bg-gradient-to-t from-blue-400 via-blue-800 to-blue-400"
         >
           <VSStripe />
@@ -157,7 +157,7 @@ const BattleScreen = ({
         <motion.div
           initial={{ translateX: 2000 }}
           animate={{ translateX: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 1, ease: "easeOut" }}
           className="relative flex h-60 w-full flex-col justify-around border-y-4 border-blue-100 bg-gradient-to-t from-blue-400 via-blue-800 to-blue-400"
         >
           <VSStripe />
@@ -169,7 +169,7 @@ const BattleScreen = ({
           <motion.div
             initial={{ translateX: 2000 }}
             animate={{ translateX: 0 }}
-            transition={{ duration: 0.7, ease: "linear", delay: 0.1 }}
+            transition={{ duration: 0.8, ease: "linear" }}
             className=" flex h-full w-full items-end justify-center pb-4"
           >
             <Image
@@ -193,7 +193,7 @@ const BattleScreen = ({
           <motion.div
             initial={{ translateX: -2000 }}
             animate={{ translateX: 0 }}
-            transition={{ duration: 0.7, ease: "linear", delay: 0.1 }}
+            transition={{ duration: 0.8, ease: "linear" }}
             className=" flex h-full w-full items-start justify-center py-10"
           >
             <Image
