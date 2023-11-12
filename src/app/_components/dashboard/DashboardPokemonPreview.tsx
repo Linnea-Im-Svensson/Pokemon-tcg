@@ -102,11 +102,6 @@ const DashboardPokemonPreview = ({
                 sellValue: cardInfo.sellValue,
                 rarity: cardInfo.rarity,
               }),
-              setCardInfo({
-                name: cardInfo.name,
-                sellValue: cardInfo.sellValue,
-                rarity: cardInfo.rarity,
-              }),
               setEditState(false)
             )}
           >

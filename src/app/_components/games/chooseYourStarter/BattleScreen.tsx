@@ -31,13 +31,17 @@ const BattleScreen = ({
       ctx.user.getPokeCoins.invalidate();
     },
   });
+  const game = api.dashboard.getGameDetails.useQuery().data;
 
   useEffect(() => {
     setTimeout(() => {
       setInitalResult(false);
     }, 1500);
     //put half the amount bc of strict mode
-    updatedResult === "Won" && mutate({ amountOfCoins: 5 });
+    updatedResult === "Won" &&
+      game &&
+      game[0]?.winValue &&
+      mutate({ amountOfCoins: game[0]?.winValue / 2 });
   }, []);
 
   const handleReset = () => {

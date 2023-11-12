@@ -7,6 +7,7 @@ import DashboardPokemonPreview from "./DashboardPokemonPreview";
 import Pagination from "../utils/Pagination";
 import Image from "next/image";
 import DashboardItemPreview from "./DashboardItemPreview";
+import DashboardGamePreview from "./DashboardGamePreview";
 
 const DashboardContainer = () => {
   const [page, setPage] = useState(1);
@@ -15,6 +16,7 @@ const DashboardContainer = () => {
   const data = api.dashboard.getDashBoardData.useQuery().data;
   const cards = api.cards.getPaginationCards.useQuery({ page: page });
   const shopItems = api.dashboard.getShopItemDetails.useQuery().data;
+  const games = api.dashboard.getGameDetails.useQuery().data;
 
   return (
     <div className="pt-14">
@@ -68,11 +70,11 @@ const DashboardContainer = () => {
           {/* Games */}
           <p className="text-xl font-semibold underline">Games:</p>
           <div className="grid w-full grid-cols-1 justify-between gap-4 lg:grid-cols-1">
-            {shopItems && shopItems[0] && (
-              <DashboardItemPreview
-                itemId={shopItems[0].id}
-                itemName={shopItems[0].name}
-                cost={shopItems[0].cost}
+            {games && games[0] && (
+              <DashboardGamePreview
+                gameId={games[0].id}
+                gameName={games[0].name}
+                winValue={games[0].winValue}
               />
             )}
           </div>
