@@ -1,13 +1,13 @@
 "use client";
 
 import { api } from "~/trpc/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DashboardCard from "./DashboardCard";
 import DashboardPokemonPreview from "./DashboardPokemonPreview";
 import Pagination from "../utils/Pagination";
-import Image from "next/image";
 import DashboardItemPreview from "./DashboardItemPreview";
 import DashboardGamePreview from "./DashboardGamePreview";
+import { PokemonCard } from "@prisma/client";
 
 const DashboardContainer = () => {
   const [page, setPage] = useState(1);
@@ -17,6 +17,10 @@ const DashboardContainer = () => {
   const cards = api.cards.getPaginationCards.useQuery({ page: page });
   const shopItems = api.dashboard.getShopItemDetails.useQuery().data;
   const games = api.dashboard.getGameDetails.useQuery().data;
+  const [search, setSearch] = useState("");
+  const searchedPokemonArr = api.cards.getSearchPokemon.useQuery({
+    name: search,
+  }).data;
 
   return (
     <div className="pt-14">
@@ -38,22 +42,34 @@ const DashboardContainer = () => {
             type="text"
             className=" w-96 rounded-lg bg-white p-2"
             placeholder="Search for pokémon"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
           />
           <div className="grid w-full grid-cols-1 justify-between gap-4 lg:grid-cols-2">
-            {cards.data?.map((card, index) => (
-              <DashboardPokemonPreview
-                card={card}
-                index={index}
-                key={card.id}
-              />
-            ))}
+            {search !== ""
+              ? searchedPokemonArr?.map((card, index) => (
+                  <DashboardPokemonPreview
+                    card={card}
+                    index={index}
+                    key={card.id}
+                  />
+                ))
+              : cards.data?.map((card, index) => (
+                  <DashboardPokemonPreview
+                    card={card}
+                    index={index}
+                    key={card.id}
+                  />
+                ))}
           </div>
-          <Pagination
-            totalPages={totalPages ?? 0}
-            query={cards}
-            page={page}
-            setPage={setPage}
-          />
+          {search === "" && (
+            <Pagination
+              totalPages={totalPages ?? 0}
+              query={cards}
+              page={page}
+              setPage={setPage}
+            />
+          )}
         </DashboardCard>
         <DashboardCard bgColor="bg-white">
           {/* Shop items */}

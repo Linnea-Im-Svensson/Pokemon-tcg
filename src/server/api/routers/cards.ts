@@ -113,4 +113,17 @@ export const cardRouter = createTRPCRouter({
         take: 6,
       });
     }),
+  getSearchPokemon: publicProcedure
+    .input(z.object({ name: z.string() }))
+    .query(({ ctx, input }) => {
+      return ctx.db.pokemonCard.findMany({
+        where: {
+          name: {
+            contains: input.name,
+            mode: "insensitive",
+          },
+        },
+        take: 6,
+      });
+    }),
 });
