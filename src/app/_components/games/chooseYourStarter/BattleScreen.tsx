@@ -56,7 +56,7 @@ const BattleScreen = ({
         <motion.div
           initial={{ translateX: -2000 }}
           animate={{ translateX: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
           className="relative flex h-60 w-full flex-col justify-around border-y-4 border-blue-100 bg-gradient-to-t from-blue-400 via-blue-800 to-blue-400"
         >
           <VSStripe />
@@ -85,27 +85,39 @@ const BattleScreen = ({
           {updatedResult && (
             <>
               {updatedResult === "Won" ? (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 1, delay: 1.5 }}
-                  className="fixed left-[50%] top-[53%] z-20 flex h-96 -translate-x-[50%] -translate-y-[50%] flex-col items-center justify-center"
-                >
-                  <Image
-                    src="/win1.png"
-                    alt="vs"
-                    height={400}
-                    width={400}
-                    priority
-                  />
-                  <button
-                    onClick={handleReset}
-                    className="absolute bottom-0 flex h-16 w-16 items-center justify-center rounded-full bg-yellow-200 font-bold"
+                <>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 2 }}
+                    className="fixed left-[50%] top-[37%] z-20 -translate-x-[50%] -translate-y-[50%]"
                   >
-                    <BsArrowClockwise size={40} />
-                  </button>
-                </motion.div>
+                    <p className="rounded-lg bg-blue-100 p-2 text-xl">
+                      + {game && game[0]?.winValue} Pokécoins!
+                    </p>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1, delay: 1.5 }}
+                    className="fixed left-[50%] top-[53%] z-20 flex h-96 -translate-x-[50%] -translate-y-[50%] flex-col items-center justify-center"
+                  >
+                    <Image
+                      src="/win1.png"
+                      alt="vs"
+                      height={400}
+                      width={400}
+                      priority
+                    />
+                    <button
+                      onClick={handleReset}
+                      className="absolute bottom-0 flex h-16 w-16 items-center justify-center rounded-full bg-yellow-200 font-bold"
+                    >
+                      <BsArrowClockwise size={40} />
+                    </button>
+                  </motion.div>
+                </>
               ) : updatedResult === "Lost" ? (
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -157,7 +169,7 @@ const BattleScreen = ({
         <motion.div
           initial={{ translateX: 2000 }}
           animate={{ translateX: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
           className="relative flex h-60 w-full flex-col justify-around border-y-4 border-blue-100 bg-gradient-to-t from-blue-400 via-blue-800 to-blue-400"
         >
           <VSStripe />
@@ -169,7 +181,7 @@ const BattleScreen = ({
           <motion.div
             initial={{ translateX: 2000 }}
             animate={{ translateX: 0 }}
-            transition={{ duration: 0.8, ease: "linear" }}
+            transition={{ duration: 0.5, ease: "linear", delay: 0.2 }}
             className=" flex h-full w-full items-end justify-center pb-4"
           >
             <Image
@@ -193,7 +205,7 @@ const BattleScreen = ({
           <motion.div
             initial={{ translateX: -2000 }}
             animate={{ translateX: 0 }}
-            transition={{ duration: 0.8, ease: "linear" }}
+            transition={{ duration: 0.5, ease: "linear", delay: 0.2 }}
             className=" flex h-full w-full items-start justify-center py-10"
           >
             <Image

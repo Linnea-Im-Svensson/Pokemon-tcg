@@ -28,7 +28,7 @@ const DashboardGamePreview = ({
   const rarity = Rarity;
   const { mutate, isLoading } = api.dashboard.updateGame.useMutation();
   return (
-    <div className="flex w-full items-center justify-between gap-4 rounded-lg border-2 border-black bg-white p-2">
+    <div className="flex h-full w-full items-center justify-between gap-4 rounded-lg border-2 border-black bg-white p-2">
       <Image
         src="/elements.webp"
         alt={gameName}
@@ -37,7 +37,7 @@ const DashboardGamePreview = ({
         priority
         className="h-auto w-14"
       />
-      <div className="flex h-full w-full flex-col items-center justify-between">
+      <div className="flex h-full w-full flex-col items-center justify-between gap-2">
         <div className="flex w-full items-center justify-between gap-2">
           <div className="flex flex-col items-start justify-center">
             <p>Name:</p>

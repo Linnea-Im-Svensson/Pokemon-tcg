@@ -37,7 +37,7 @@ const DashboardPokemonPreview = ({
         priority={index <= 12}
         className="h-auto w-14"
       />
-      <div className="flex h-full w-full flex-col items-center justify-between">
+      <div className="flex h-full w-full flex-col items-center justify-between gap-2">
         <div className="flex w-full items-center justify-between gap-2">
           <div className="flex flex-col items-start justify-center">
             <p>Name:</p>
@@ -51,7 +51,7 @@ const DashboardPokemonPreview = ({
                 className="w-full rounded-lg border-2 border-black p-1"
               />
             ) : (
-              <p>{card.name}</p>
+              <p>{cardInfo.name}</p>
             )}
           </div>
           <div className="flex flex-col items-start justify-center">
@@ -66,7 +66,7 @@ const DashboardPokemonPreview = ({
                 className="w-20 rounded-lg border-2 border-black p-1"
               />
             ) : (
-              <p>{card.sellValue}</p>
+              <p>{cardInfo.sellValue}</p>
             )}
           </div>
           <div className="flex flex-col items-start justify-center">
@@ -88,13 +88,13 @@ const DashboardPokemonPreview = ({
                 </option>
               </select>
             ) : (
-              <p>{card.rarity}</p>
+              <p>{cardInfo.rarity}</p>
             )}
           </div>
         </div>
         {editState ? (
           <button
-            className="flex h-10 w-full items-center justify-center rounded-lg bg-yellow-200 p-2 hover:bg-yellow-300"
+            className="mt-2 flex h-10 w-full items-center justify-center rounded-lg bg-yellow-200 p-2 hover:bg-yellow-300"
             onClick={() => (
               mutate({
                 cardId: card.id,

@@ -9,7 +9,7 @@ export default {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       backgroundImage: {
-        pokemonBackground: "url('/background.jpg')",
+        pokemonBackground: "url('/background.png')",
         battleBackground: "url('/battle-bg.png')",
       },
     },
