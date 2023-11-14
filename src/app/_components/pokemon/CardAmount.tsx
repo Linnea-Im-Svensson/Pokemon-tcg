@@ -1,7 +1,5 @@
 "use client";
 
-// import { api } from "~/trpc/server";
-
 import { api } from "~/trpc/react";
 
 const CardAmount = ({

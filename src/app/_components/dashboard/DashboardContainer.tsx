@@ -1,13 +1,12 @@
 "use client";
 
 import { api } from "~/trpc/react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import DashboardCard from "./DashboardCard";
 import DashboardPokemonPreview from "./DashboardPokemonPreview";
 import Pagination from "../utils/Pagination";
 import DashboardItemPreview from "./DashboardItemPreview";
 import DashboardGamePreview from "./DashboardGamePreview";
-import { PokemonCard } from "@prisma/client";
 
 const DashboardContainer = () => {
   const [page, setPage] = useState(1);

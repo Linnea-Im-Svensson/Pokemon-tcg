@@ -23,8 +23,6 @@ const shopPage = () => {
   });
   const items = api.dashboard.getShopItemDetails.useQuery().data;
 
-  console.log(items);
-
   const { data } = api.user.getPokeCoins.useQuery();
 
   const [showDisabledNote, setShowDisabledNote] = useState(false);
@@ -35,7 +33,7 @@ const shopPage = () => {
         <button
           onClick={() => items[0]?.cost && mutate({ itemCost: items[0]?.cost })}
           disabled={isLoading || data?.pokeCoins! < items[0]?.cost}
-          className="relative flex h-fit w-80 flex-col items-center justify-center gap-4 rounded-xl border-4 border-black bg-white py-4"
+          className="relative flex min-h-[320px] w-80 flex-col items-center justify-center gap-4 rounded-xl border-4 border-black bg-white py-4"
           onMouseOver={() =>
             data?.pokeCoins! < items[0]?.cost! && setShowDisabledNote(true)
           }

@@ -126,4 +126,28 @@ export const cardRouter = createTRPCRouter({
         take: 6,
       });
     }),
+  getLatestBigPulls: protectedProcedure.query(({ ctx }) => {
+    return ctx.db.cardOwnedByUser.findMany({
+      where: {
+        userId: ctx.session.user.id,
+        pokemonCard: {
+          NOT: [
+            {
+              rarity: "common",
+            },
+            {
+              rarity: "uncommon",
+            },
+          ],
+        },
+      },
+      orderBy: {
+        createdAt: "desc",
+      },
+      take: 10,
+      include: {
+        pokemonCard: true,
+      },
+    });
+  }),
 });
