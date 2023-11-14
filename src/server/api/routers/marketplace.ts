@@ -102,4 +102,22 @@ export const marketplaceRouter = createTRPCRouter({
         }),
       ]);
     }),
+  getSearchedItems: publicProcedure
+    .input(z.object({ name: z.string() }))
+    .query(({ ctx, input }) => {
+      return ctx.db.marketPlaceItem.findMany({
+        where: {
+          pokemonCard: {
+            name: {
+              contains: input.name,
+              mode: "insensitive",
+            },
+          },
+        },
+        include: {
+          pokemonCard: true,
+          seller: true,
+        },
+      });
+    }),
 });
