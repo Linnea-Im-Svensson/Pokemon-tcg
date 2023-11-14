@@ -1,7 +1,6 @@
 import { getServerAuthSession } from "~/server/auth";
 import Username from "../_components/profile/Username";
 import LatestBigPulls from "../_components/profile/LatestBigPulls";
-import ProfileImage from "../_components/profile/ProfileImage";
 import Image from "next/image";
 
 const profilePage = async () => {
