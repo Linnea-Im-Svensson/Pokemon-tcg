@@ -14,7 +14,7 @@ const PaginationBtn = ({
 }) => {
   return (
     <button
-      className={`flex h-12 w-12 items-center justify-center rounded-full ${
+      className={`flex h-10 w-10 items-center justify-center rounded-full ${
         currPage === pageNr ? "bg-yellow-200" : "bg-white"
       } text-black hover:bg-neutral-300`}
       onClick={() =>

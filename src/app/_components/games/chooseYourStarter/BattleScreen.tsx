@@ -93,7 +93,7 @@ const BattleScreen = ({
                     className="fixed left-[50%] top-[37%] z-20 -translate-x-[50%] -translate-y-[50%]"
                   >
                     <p className="rounded-lg bg-blue-100 p-2 text-xl">
-                      + {game && game[0]?.winValue} Pokécoins!
+                      + {game?.[0]?.winValue} Pokécoins!
                     </p>
                   </motion.div>
                   <motion.div

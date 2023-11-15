@@ -7,6 +7,7 @@ import DashboardPokemonPreview from "./DashboardPokemonPreview";
 import Pagination from "../utils/Pagination";
 import DashboardItemPreview from "./DashboardItemPreview";
 import DashboardGamePreview from "./DashboardGamePreview";
+import PikaLoading from "../utils/PikaLoading";
 
 const DashboardContainer = () => {
   const [page, setPage] = useState(1);
@@ -19,7 +20,7 @@ const DashboardContainer = () => {
   const [search, setSearch] = useState("");
   const searchedPokemonArr = api.cards.getSearchPokemon.useQuery({
     name: search,
-  }).data;
+  });
 
   return (
     <div className="pt-14">
@@ -36,7 +37,7 @@ const DashboardContainer = () => {
         </DashboardCard>
       </div>
       <div className="flex h-full w-full flex-col items-center justify-center gap-4 p-4 lg:h-[530px] lg:flex-row">
-        <div className="w-full lg:w-2/3">
+        <div className="h-full w-full lg:w-2/3">
           <DashboardCard bgColor="bg-red-200">
             <input
               type="text"
@@ -45,22 +46,30 @@ const DashboardContainer = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
-            <div className="grid w-full grid-cols-1 justify-between gap-4 lg:grid-cols-2">
-              {search !== ""
-                ? searchedPokemonArr?.map((card, index) => (
-                    <DashboardPokemonPreview
-                      card={card}
-                      index={index}
-                      key={card.id}
-                    />
-                  ))
-                : cards.data?.map((card, index) => (
-                    <DashboardPokemonPreview
-                      card={card}
-                      index={index}
-                      key={card.id}
-                    />
-                  ))}
+            <div className="grid h-full w-full grid-cols-1 justify-between gap-4 lg:grid-cols-2">
+              {cards.isLoading || searchedPokemonArr.isFetching ? (
+                <div className="flex h-full w-full items-center justify-center lg:-translate-y-48 lg:translate-x-52">
+                  <PikaLoading />
+                </div>
+              ) : (
+                <>
+                  {search !== ""
+                    ? searchedPokemonArr?.data?.map((card, index) => (
+                        <DashboardPokemonPreview
+                          card={card}
+                          index={index}
+                          key={card.id}
+                        />
+                      ))
+                    : cards.data?.map((card, index) => (
+                        <DashboardPokemonPreview
+                          card={card}
+                          index={index}
+                          key={card.id}
+                        />
+                      ))}
+                </>
+              )}
             </div>
             {search === "" && (
               <Pagination

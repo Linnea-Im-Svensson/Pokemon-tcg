@@ -18,7 +18,7 @@ const marketplacePage = () => {
       <Banner />
       <input
         type="text"
-        className="fixed left-[50%] top-16 z-20 w-96 -translate-x-[50%] rounded-lg border-2 border-neutral-200 bg-white p-2 lg:top-28"
+        className="fixed left-[50%] top-24 w-96 -translate-x-[50%] rounded-lg border-2 border-neutral-200 bg-white p-2 md:top-28"
         placeholder="Search for pokémon"
         value={search}
         onChange={(e) => setSearch(e.target.value)}

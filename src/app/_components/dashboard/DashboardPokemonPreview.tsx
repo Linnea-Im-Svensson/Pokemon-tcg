@@ -28,7 +28,7 @@ const DashboardPokemonPreview = ({
   const rarity = Rarity;
   const { mutate, isLoading } = api.dashboard.updateCard.useMutation();
   return (
-    <div className="flex w-full items-center justify-between gap-4 rounded-lg border-2 border-black bg-white p-2">
+    <div className="flex h-fit w-full items-center justify-between gap-4 rounded-lg border-2 border-black bg-white p-2">
       <Image
         src={card.image}
         alt={card.name}

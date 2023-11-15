@@ -6,11 +6,13 @@ import { useState } from "react";
 import BattleScreen from "./BattleScreen";
 import Pokeball, { GamePokemon } from "./Pokeball";
 import { AiOutlineInfoCircle } from "react-icons/ai";
+import { api } from "~/trpc/react";
 
 const ChooseYourStarterGame = () => {
   const [showBattleScreen, setShowBattleScreen] = useState(false);
   const [chosenPokemon, setChosenPokemon] = useState<GamePokemon | null>(null);
   const [showRules, setShowRules] = useState(false);
+  const winValue = api.dashboard.getGameDetails.useQuery().data;
 
   return (
     <div className="h-full w-full overflow-hidden bg-battleBackground bg-cover bg-center pt-20">
@@ -62,7 +64,9 @@ const ChooseYourStarterGame = () => {
                 opponent trainer chooses a pokemon at random and the battle is
                 decided based on the Pokémon's element.
               </p>
-              <p className="mt-6 text-xl font-semibold">Price: 10 Pokécoins</p>
+              <p className="mt-6 text-xl font-semibold">
+                Price: {winValue?.[0]?.winValue} Pokécoins
+              </p>
             </motion.div>
           </motion.div>
         )}

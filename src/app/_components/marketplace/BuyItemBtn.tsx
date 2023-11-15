@@ -17,6 +17,7 @@ const BuyItemBtn = ({
   const { mutate, isLoading } = api.marketplace.buyMarketItem.useMutation({
     onSuccess: async () => {
       await ctx.marketplace.getAllItems.invalidate();
+      await ctx.marketplace.getSearchedItems.invalidate();
       await ctx.user.getPokeCoins.invalidate();
       router.back();
     },
