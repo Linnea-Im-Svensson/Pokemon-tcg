@@ -1,28 +1,29 @@
-# Create T3 App
+# Pokémon TCG Collection
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+### Creator
 
-## What's next? How do I make an app with this?
+Created by **Linnéa Svensson**
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+https://github.com/ChasAcademy-Linnea-Svensson
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+### Info
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+A Pokémon Trading Card Collection Game where you collect cards from the scarlet and violet 151 series. Play games to collect pokécoins, open up packs, and buy the ones you're missing from the marketplace.
 
-## Learn More
+A school project to learn Typescript, TRPC and Prisma. The project is not meant to be a fully optimized game, but simply a challenge to see how far I can come with the knowledge I have at the time.
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+### GitHub repo: :point_down:
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+https://github.com/ChasAcademy-Linnea-Svensson/Pokemon-tcg
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+### Deployed here: :point_down:
 
-## How do I deploy this?
+https://pokemon-tcg-theta.vercel.app/
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+### Future plans:
+
+- [ ] Add more games.
+- [ ] Improve user experience
+- [ ] Improve design
+
+### Bug fixing plans:
